@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;	
+            box-sizing: border-box;
+            /* box-sizing: content-box; */
+        }
+         /* I am styling my H1 */
+        h1.box{
+            background-color: blueviolet !important;
+            background-color: green !important;
+            border: solid 10px red;
+            padding: 100px;
+            /* border-color: black;
+            border-style: solid;
+            border-width: 5px; */
+            /* padding-top: 20px; */
+            /* padding: 50px; */
+            /* margin-top: 50px; */
+            /* padding-top: 20px; */
+            /* padding-left: 50px; */
+            /* padding-bottom: 100px; */
+            /* padding-right: 100px; */
+            /* padding: 10px 20px 30px 40px; */
+            /* display: inline; */
+            /* padding: 50px 100px; */
+            /* padding: 100px; */
+            /* padding-inline: 200px; */
+            /* padding-block: 100px; */
+            /* padding: 0 100px; */
+            /* margin-bottom: 100px; */
+            /* margin-left: 200px; */
+            width: fit-content;
+            width: 300px;      
+            height: 300px;     
+            margin-inline: auto;
+            /* margin-top: 200px; */
+        }
+        span{
+            background-color: blue;
+            /* display: block; */
+        }
+        body{
+            height: 100vh;
+            /* display: grid;
+            place-items: center; */
+        }
+        p{
+            color: blue;
+            font-size: 30px;
+        }
+        .green{
+            color: green;
+        }
+        #red{
+            color: red;
+        }
+        p[brown]{
+            color: brown;
+        }
+        div p{
+            color: black;
+        }
+        div h1{
+            color: black;
+            border: none;
+            background-color: unset !important;
+            margin-inline: unset;
+            width: unset;
+            padding: unset;
+            height: unset;
+        }
+    </style>
+</head>
+<body>
+    <h1>1</h1>
+    <h1 class="box">2</h1>
+    <span class="box">3</span>
+    <p>Cat</p>
+    <p class="green">Dog</p>
+    <p id="red">Cow</p>
+    <p brown>Goat</p>
+    <div>
+        <p>Nested Paragraph</p>
+        <h1>Nested H1</h1>
+    </div>
+    <!-- <h1>2</h1>
+    <h1>3</h1>
+    <span>Helo</span>
+    <span>Nigeria</span>
+    <span>Uyo</span>
+    <span>Sambisa</span> -->
+</body>
+</html>
