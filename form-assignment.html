@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #FF6C37;
+            font-family: "Poppins", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1{
+            font-size: 20px;
+            margin-block: 10px;
+        }
+        form{
+            background-color: #160333;
+            width: 500px;
+            color: white;
+            padding: 40px;
+            border-radius: 40px;
+        }
+        img{
+            width: 200px;
+        }
+        .form-input{
+            display: flex;
+            flex-direction: column;
+        }
+        .form-input input{
+            padding: 5px;
+            outline: none;
+            border-radius: 10px;
+            border: none;
+        }
+        label{
+            cursor: pointer;
+        }
+        select{
+            width: 100%;
+            border-radius: 30px;
+            padding: 5px;
+        }
+        button{
+            background-color: #DE3561;
+            color: white;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            padding: 5px 15px;
+            font-size: 20px;
+            border-radius: 30px;
+        }
+        button:hover{
+            background-color: #a779c0;
+        }
+    </style>
+</head>
+<body >
+    <form action="">        
+        <img src="logo.png" alt="chaindustry logo">
+        <h1>Sign up for our masterclass</h1>
+        <div class="form-input">
+            <label for="">Full name</label>
+            <input type="text">
+        </div>
+        <div>
+            <label for="">Select your preferred mode of learning </label>
+            <select name="" id="">
+                <option value="online">Online</option>
+                <option value="in-person">In-person</option>
+            </select>
+        </div>
+        <div>
+            <p>Choose your payment mode</p>
+            <input type="radio" id="USD" name="payment-mode">
+            <label for="USD">USD</label>
+            <div>
+                <input type="radio" id="naira" name="payment-mode">
+                <label for="naira">Naira</label>
+            </div>            
+        </div>
+        <div>
+            <p>Select your prefered Tutor</p>
+            <div>
+                <input type="checkbox" id="empato">
+                <label for="empato">Empato</label>
+            </div>
+            <div>
+                <input type="checkbox" id="bernard">
+                <label for="bernard">Bernard</label>
+            </div>
+        </div>
+      <button>Apply now</button>
+    </form>
+</body>
+</html>
