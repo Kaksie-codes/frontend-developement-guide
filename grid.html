@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .wrapper{
+            background-color: rgb(8, 8, 8);
+            /* min-height: 80vh !important; */
+            width: 60vw;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);   
+            grid-template-rows: 1fr 1fr 1fr;
+            column-gap: 10px;      
+            row-gap: 20px;  
+            padding: 10px;
+            /* outline: solid 10px rgb(8, 8, 8); */
+        }
+        body{            
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .box{
+            height: 100px;
+        }
+        .box:nth-child(1){
+            background-color: indigo;
+            grid-column: span 2;
+        }
+        .box:nth-child(2){
+            background-color: rgb(16, 215, 69);
+        }
+        .box:nth-child(3){
+            background-color: aliceblue;
+        }
+        .box:nth-child(4){
+            background-color: indigo;
+        }
+        .box:nth-child(5){
+            background-color: blueviolet;
+        }
+        .box:nth-child(6){
+            background-color: rgb(227, 133, 19);
+        }
+        .box:nth-child(7){
+            background-color: rgb(150, 227, 25);
+            grid-column: span 2;
+        }
+        .box:nth-child(8){
+            background-color: rgb(224, 18, 49);
+        }
+        .box:nth-child(9){
+            background-color: rgb(6, 51, 91);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+</body>
+</html>
