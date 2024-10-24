@@ -29,6 +29,11 @@
         }
         .box{
             height: 100px;
+            display: grid;
+            /* place-items: center; */
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
         }
         .box:nth-child(1){
             background-color: indigo;
@@ -39,9 +44,18 @@
         }
         .box:nth-child(3){
             background-color: aliceblue;
+            grid-row: span 2;
+            height: unset;
         }
         .box:nth-child(4){
             background-color: indigo;
+            /* grid-row: span 2; */
+            /* grid-column: span 2; */
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-column: 2/4;
+            grid-row: 2/4;
+            height: unset;
         }
         .box:nth-child(5){
             background-color: blueviolet;
