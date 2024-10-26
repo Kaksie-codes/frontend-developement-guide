@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .wrap{
+            border: 2px solid black;
+            width: 70vw;
+            height: 60vh;
+            color: white;
+            font-size: 25px;
+        }
+        .top{
+            background-color: #00BFFE;
+            height: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .middle{
+            background-color: aquamarine;
+            display: flex;
+            height: 40%;
+            text-align: center;
+        }
+        .middle div{
+            padding-top: 20px;
+        }
+        .middle div:nth-child(1){
+            flex-grow: 1;
+            flex-shrink: 1;
+            background-color: #FF4500;
+            /* flex-basis: 100%; */
+        }
+        .middle div:nth-child(2){
+            /* flex: 1; */
+            flex-grow: 2;
+            flex-shrink: 2;
+            background-color: #32CD33;
+        }
+        .middle div:nth-child(3){
+            flex-grow: 1;
+            flex-shrink: 1;
+            /* flex: 1; */
+            background-color: #FED700;
+        }
+        .bottom{
+            background-color: #8A2BE1;
+            display: flex;
+            height: 40%;
+            gap: 15px;
+            padding: 20px;
+        }
+        .bottom div{
+            background-color: #FF7F50;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <div class="top">header</div>
+        <div class="middle">
+            <div>left sidebar</div>
+            <div>Main Content</div>
+            <div>Right Sidebar</div>
+        </div>
+        <div class="bottom">
+            <div>footer 1</div>
+            <div>footer 2</div>
+            <div>footer 3</div>
+            <div>footer 4</div>
+        </div>
+    </section>
+</body>
+</html>
