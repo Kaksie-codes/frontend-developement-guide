@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+    }
+    section.wrapper{
+        border: 5px solid black;
+        height: 85vh;
+        width: 70vw;
+        padding: 25px;
+    }
+    .full-box{
+        /* background-color: #FFA500; */
+        height: 10%;
+    }
+    .yellow{
+        background-color: #FFA500;
+    }
+    .black{
+        background-color: black;
+    }
+    .box-2{
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: center;
+        gap: 10px;
+        height: 10%;
+        padding: 20px;
+    }
+    .box-2 div{
+        /* height: 60px; */
+        background-color: black;
+        flex: 1;
+        height: 100%;
+    }
+    .box-3{
+        height: 70%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding-bottom: 20px;
+        gap: 10px;
+    }
+    .box-3 div:nth-child(2){
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .box-3 div:nth-child(2) .yellow{        
+        flex: 1;
+    }
+    .box-3 div:nth-child(3){
+        display: flex;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .box-3 div:nth-child(3) .black{
+        flex: 1;
+    }
+</style>
+<body>
+    <section class="wrapper">
+        <div class="full-box yellow"></div>
+        <div class="box box-2">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box box-3">
+            <div class="yellow"></div>
+            <div>
+                <div class="yellow"></div>
+                <div class="yellow"></div>
+            </div>
+            <div>
+                <div class="black"></div>
+                <div class="black"></div>
+                <div class="black"></div>
+                <div class="black"></div>
+                <div class="black"></div>
+            </div>
+        </div>
+        <div class="full-box yellow"></div>
+    </section>
+</body>
+</html>
