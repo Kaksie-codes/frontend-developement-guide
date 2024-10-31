@@ -26,15 +26,6 @@
         font-size: 40px;
        }
 
-       @media (max-width: 400px) {
-        .box{
-            background-color: blue;
-        }
-        .container{
-            grid-template-columns: 1fr;
-        }
-       }
-
        @media screen and (max-width: 700px) {
         .box{
             background-color: red;
@@ -44,6 +35,17 @@
             grid-template-columns: repeat(2, 1fr);
         }
        }
+       
+       @media (max-width: 400px) {
+        .box{
+            background-color: blue;
+        }
+        .container{
+            grid-template-columns: 1fr;
+        }
+       }
+
+      
      
     </style>
 </head>

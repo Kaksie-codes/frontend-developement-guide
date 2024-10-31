@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container{        
+        width: 90%;
+        max-width: 1000px;
+        margin-inline: auto;        
+        min-height: 100vh;
+        gap: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: yellow;
+       }
+       .box{
+        background-color: green;
+        display: grid;
+        place-items: center;
+        font-size: 40px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 32%;
+        
+        /* flex:1 1 32% ; */
+       }
+
+       @media screen and (max-width: 700px){
+        .box{
+            background-color: blue;
+            flex: 1 1 46%;
+        }
+       }
+       @media screen and (max-width: 400px){
+        .box{
+            background-color: rgb(255, 0, 0);
+            /* flex: 1 1 100%; */
+        }
+       }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+    <script>
+        const heading = document.querySelector('h1');
+        let width = window.innerWidth;
+        heading.textContent = 'Width:' +  width + 'px'; 
+
+        window.addEventListener('resize', () => {
+            width = window.innerWidth;            
+            heading.textContent = 'Width:' +  width + 'px';           
+        })
+    </script>
+</body>
+</html>
