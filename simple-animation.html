@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Applying the animation */
+        .animated-box {
+            height: 100px;
+            width: 100px;
+            animation: colorChange 2s infinite;
+        }
+        /* .animated-box {
+            animation-name: colorChange;
+            animation-duration: 2s;
+            animation-iteration-count: 4;
+            animation-delay: 1s;
+            animation: colorChange 3s 4 2s;
+        } */
+
+        /* Defining the animation stages with keyframes */
+        @keyframes colorChange {
+            0% { background-color: blue; }
+            50% { background-color: red; }
+            100% { background-color: blue; }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="animated-box"></div>
+</body>
+</html>

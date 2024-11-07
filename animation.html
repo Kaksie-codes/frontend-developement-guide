@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Animation</title>
+    <style>
+        body {
+           
+            padding: 100px;
+        }
+
+        .animated-shape { 
+            position: relative;           
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            animation: animate-shape 40s infinite;
+        }
+
+        @keyframes animate-shape {
+            0%{
+                background-color: blue;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Square */
+                left: 0;
+                top: 300px;
+            }
+            25%{
+                background-color: red;
+                left: 800px;
+                top: 20px;
+                clip-path: polygon(50% 0%, 100% 100%, 0% 100%); /* Triangle */
+            }
+            50%{
+                background-color: yellow;
+                left: 800px;
+                top: 500px;
+                clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); /* Kite */
+            }
+            75%{
+                background-color: green;
+                left: 0px;
+                top: 500px;
+                clip-path: circle(50% at 50% 50%); /* Circle */
+            }
+            100%{
+                background-color: purple;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Square */
+                left: 0px;
+                top: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-shape"></div>
+</body>
+</html>
