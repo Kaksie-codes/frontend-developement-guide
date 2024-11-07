@@ -19,9 +19,10 @@
 
         /* Applying the animation */
         .animated-box {
-            height: 100px;
-            width: 100px;
-            animation: colorChange 2s infinite;
+            height: 200px;
+            width: 200px;
+            background-color: brown;
+            animation: colorChange 20s infinite 5s;
         }
         /* .animated-box {
             animation-name: colorChange;
@@ -33,9 +34,19 @@
 
         /* Defining the animation stages with keyframes */
         @keyframes colorChange {
-            0% { background-color: blue; }
-            50% { background-color: red; }
-            100% { background-color: blue; }
+            0% { 
+                background-color: blue; 
+                width: 250px;
+                height: 250px;
+            }
+            25% { 
+                background-color: red; 
+                width: 150px;
+                height: 150px;
+            }
+            50% { background-color: rgb(0, 255, 17); }
+            75% { background-color: rgb(242, 255, 0); }
+            100% { background-color: rgb(255, 0, 221); }
         }
 
     </style>
