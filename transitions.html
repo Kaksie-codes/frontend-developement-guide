@@ -21,20 +21,29 @@
         .box-1{
             width: 200px;
             height: 200px;
-            background-color: blue;
-            transition: all 5s;
-            /* transition:background-color 2s, width 5s, transform 5s, border-radius 5s, height 5s ; */
-            /* transition:background-color 10s ease-in, width 10s ease-in; */
-            transition-timing-function: ease-in;
-            /* transition-delay: 2s; */
+            background-color: blue;  
+            border-radius: 0;          
+            /* transition: 5s ease-out 2s background-color, width 5s linear, height 5s linear, border-radius 5s linear; */
+            /* transition-property: background-color;
+            transition-duration: 5s;
+            transition-timing-function: ease-out;
+            transition-delay: 2s; */
+            transition: all 5s  linear 5s;
+            
         }
         .box-1:hover{
             background-color: red;
             width: 500px;
             height: 500px;
-            /* transform: translateX(500px); */
             border-radius: 50%;
         }
+        /* .box-1:hover{
+            background-color: red;
+            width: 500px;
+            height: 500px;
+            transform: translateX(500px);
+            border-radius: 50%;
+        } */
         .box-2 {
             background-color: blue;
             color: white;
