@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Splitter - Tip Calculator</title>
+    <link rel="stylesheet" href="bill.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <span class="splitter">SPLI <br> TTER</span>
+    <section class="main">
+        <div class="left">
+            <div class="bill-input">
+                <label for="bill"  class="label">Bill</label>
+                <div class="input-wrapper">
+                    <i class="fa fa-usd" aria-hidden="true"></i>
+                    <input type="text" value="0" id="bill">
+                </div>
+            </div>
+            <div class="tip-select">
+                <p class="label">Select tip %</p>
+                <div class="btn-group">
+                    <button>5%</button>
+                    <button>10%</button>
+                    <button>15%</button>
+                    <button>25%</button>
+                    <button>50%</button>
+                    <button id="custom">Custom</button>                    
+                </div>
+            </div>
+            <div class="number-input">                
+                <label for="people" class="label">Number of People</label>  
+                <div class="input-wrapper">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input type="text" value="1" id="people">
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="display">
+                <div>
+                    <span>
+                        <p class="white-text">Tip Amount</p>
+                        <p>/ person</p>
+                    </span>
+                    <span class="amount">
+                        <i class="fa fa-usd" aria-hidden="true"></i>
+                        0.00
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <p class="white-text">Total</p>
+                        <p>/ person</p>
+                    </span>
+                    <span class="amount">
+                        <i class="fa fa-usd" aria-hidden="true"></i>
+                        0.00
+                    </span>
+                </div>                
+            </div>
+            <button class="disabled">RESET</button>
+        </div>
+    </section>
+</body>
+</html>
