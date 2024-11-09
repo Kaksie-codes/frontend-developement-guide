@@ -10,9 +10,16 @@ body{
     place-items: center;
     font-family: "Sour Gummy", sans-serif;
 }
+.container{
+    width: 70%; 
+}
+.split{
+    text-align: center;
+}
 section.main{
+    margin-top: 20px;
     background-color: #FFFFFF;
-    width: 70%;  
+    width: 100%;  
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
     padding: 20px;
@@ -126,36 +133,32 @@ input:focus{
     font-size: 30px;
     color: #31B1A4;
 }
-.splitter{
-    position: absolute;
-    top: 30px;
+.splitter{    
     color: #4E7173;
     font-size: 30px;
 }
 
 
 @media  (max-width: 768px) {
-    section.main{
-        grid-template-columns: 1fr;
+    .container{
         width: 90%;
+    }
+    section.main{
+        grid-template-columns: 1fr;        
     }
     .right button{
         margin-top: 25px;
     }
     .splitter{
-        font-size: 20px;
-        top: 20px;
+        font-size: 20px;       
     }
 }
 @media (max-width: 380px) {
     .splitter{
-        font-size: 16px;
-        top: 16px;
+        font-size: 16px;        
     }
     .amount{
         font-size: 20px;       
     }
-    section.main{
-        margin-top: 25px;
-    }
+   
 }
