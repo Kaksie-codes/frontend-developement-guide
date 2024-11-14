@@ -20,7 +20,7 @@ true;         // A boolean literal expression
 7 * 3;        // Multiplication, evaluates to 21
 8 / 2;        // Division, evaluates to 4
 
-console.log(20 - 5);
+// console.log(20 - 5);
 
 
 // String Expressions:
@@ -29,6 +29,12 @@ console.log(20 - 5);
 // e.g
 "Hello" + " " + "World";   // Concatenation, evaluates to "Hello World"
 console.log("Hello" + " " + "World");
+
+let string1 = "Frontend";
+let string2 = "Development"
+let string3 = "class"
+
+console.log(string1 + " " + string2 + " " + string3);
 
 // Logical Expressions:
 // Expressions that use logical operators to return boolean values (true or false).
@@ -66,9 +72,9 @@ console.log(x);
 // condition ? expression1 : expression2;
 let age = 18;
 let canVote = (age >= 180) ? "Yes" : "No";  // Evaluates to "Yes"
-console.log(canVote);
+// console.log(canVote);
 
 let chain = 7;
 let isAllowedtoEnterClass = (chain === 8) ? true : false;
 
-console.log(isAllowedtoEnterClass);
+// console.log(isAllowedtoEnterClass);
