@@ -7,15 +7,16 @@
 // if (condition) {
 //   code to execute if condition is true
 // }
+
 // let animal = 5;
 
-// if(animal === '5'){
-//     console.log('Greater than');    
+// if(animal === "5"){
+//     console.log("Greater");    
 // }
 
 // let password = '12345678';
 
-// if(!(password !== 12345678)){
+// if(!(password === 12345678)){
 //     console.log('logged in successfully');
 // }else{
 //     console.log('invalid credentials');
@@ -65,7 +66,7 @@
 
 
 
-// let bankBalance = 70000;
+// let bankBalance = 700;
 
 // if(bankBalance > 80000){
 //     console.log('rich Investor');
@@ -114,29 +115,45 @@
 //       code to execute if expression doesn't match any case
 //   }
 
-let num = 2 + 50;
-switch (num){
-    case 7:
-        console.log('seven');
-        break;
-    case 4:
-        console.log('four');
-        break;
-    default:
-        console.log('invalid number');
-}
+// let num = 2 + 5;
+// switch (num){
+//     case 7:
+//         console.log('seven');
+//         break;
+//     case 4:
+//         console.log('four');
+//         break;
+//     default:
+//         console.log('invalid number');
+// }
 
-// let word1 = 'happy';
-// let word2 = 'birthday';
-// let word3 = 'Bassey';
+let word1 = 'happy ';
+let word2 = 'birthday';
+let word3 = ' Bassey';
 
 // string concatenation method
-// console.log(word1 + ' ' + word2  + ' ' + word3);
+// console.log(word1 + word2  +  word3);
 // console.log('Merry' + " " + 'christmas')
 
-// let word4 = 'Good';
-// let word5 = 'day';
-// let word6 = 'Bro';
+let word4 = 'Good';
+let word5 = 'day';
+let word6 = 'Bro';
 
-// // string interpolation method
-// console.log(`${word4} ${word5} ${word6} Nathaniel`);
+// string interpolation method
+// console.log(`${word4} ${word5} ${word6} David!`);
+
+
+// if(((!(true && !(false)) || (false && !(true && !(false)))))){
+//     console.log('e dey work o....')
+// }else{
+//     console.log('e no dey work o......')
+// }
+
+let condition = -1;
+console.log({condition});
+
+if(condition){
+    console.log('condition is true');
+}else{
+    console.log('condition is false');
+}

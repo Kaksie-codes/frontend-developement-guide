@@ -28,13 +28,15 @@ true;         // A boolean literal expression
 
 // e.g
 "Hello" + " " + "World";   // Concatenation, evaluates to "Hello World"
-console.log("Hello" + " " + "World");
+// console.log("Hello" + " " + "World");
 
 let string1 = "Frontend";
 let string2 = "Development"
 let string3 = "class"
 
-console.log(string1 + " " + string2 + " " + string3);
+// console.log(string1 + " " + string2 + " " + string3);
+// console.log(" i love eating ice cream and popcorn, at my friends house");
+
 
 // Logical Expressions:
 // Expressions that use logical operators to return boolean values (true or false).
@@ -44,7 +46,7 @@ console.log(string1 + " " + string2 + " " + string3);
 10 == 10;       // Equality, evaluates to true
 7 != 2;         // Not equal, evaluates to true
 
-console.log(10 === "10");
+// console.log(5 === "5");
 
 
 // Assignment Expressions
