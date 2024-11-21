@@ -69,3 +69,18 @@ const isNotSingle = getRelationshipStatus(29);
 
 const isAfrican = true;
 console.log(isNotSingle);
+
+
+const details = (name, height) => {
+    if(height >= 2){
+        console.log(`${name} you are ${height}m tall, and you qualify to play basketball, voleyball and football.`)
+    }else if(height >= 1.7){
+        console.log(`${name} you are ${height}m tall, and you qualify to play voleyball and football.`)
+    }else if (height >= 1.2){
+        console.log(`${name} you are ${height}m tall, and you qualify to play football.`)
+    }else{
+        console.log(`${name} you are ${height}m tall, and you do not qualify to play any sport.`)
+    }
+}
+
+details('Mfoniso', 2)
