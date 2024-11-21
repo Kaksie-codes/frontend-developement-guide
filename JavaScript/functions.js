@@ -6,7 +6,9 @@ function greetings(){
     console.log('Hello, Nigeria!');
     console.log('');
 }
-// greetings()
+// greetings();
+// greetings();
+// greetings();
 
 const displayCarNames = () => {
     console.log("Benz")
@@ -18,21 +20,52 @@ const displayCarNames = () => {
 
 // displayCarNames()
 
-const calculateSum = (num1, num2) => {
+const calculateSum = (num1 = 2, num2 = 3) => {
     console.log(num1)
     console.log(num2)
     console.log(num1 + num2)
 }
 
-calculateSum()
-calculateSum(10001)
-// calculateSum(100, -4)
+// calculateSum(100, 200)
+// calculateSum(10001)
+// calculateSum(100, 4)
 
-let num;
-console.log({num})
+// let num;
+// console.log({num})
 
 const calculate = (num1, num2, operation) => {
-
+    console.log({num1, num2, operation})
+    if(operation === "add" || operation === "addition"){
+        console.log(num1 + num2)
+    }else if(operation === "sub" || operation === "subtract"){
+        console.log(num1 - num2)
+    }else if(operation === "mul" || operation === "multiply"){
+        console.log(num1 * num2)
+    }else if(operation === "div" || operation === "divide"){
+        console.log(num1 / num2)
+    }else if(operation === "mod" || operation === "modulus"){
+        console.log(num1 % num2)
+    }else{
+        console.log("Invalid operation")
+    }
 }
 
-calculate(10, 2, "add");
+// calculate(10, 2, "addidas");
+
+const getRelationshipStatus = (age) => {
+    // return    
+    if(age >= 18){
+        console.log('before returning true')
+        return true;
+        console.log('after returning true')
+    }else{
+        console.log('before returning false')
+        return false
+        console.log('after returning false')
+    }
+}
+
+const isNotSingle = getRelationshipStatus(29);
+
+const isAfrican = true;
+console.log(isNotSingle);
