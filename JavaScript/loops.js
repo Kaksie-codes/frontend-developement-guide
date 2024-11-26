@@ -12,7 +12,7 @@
 //     console.log(num);
 // }
 
-// for(let num = 0; num <= 10; num++){
+// for(let num = 0; num <= 20; num++){
 //     console.log(num);
 // }
 
@@ -20,12 +20,10 @@
 //     console.log(num);
 // }
 
-// for(let num = 0; num < 20; num++){
-//     if(num >= 3){
-//         if(num % 3 === 0){
-//             console.log(num);
-//         }
-//     }   
+// for(let num = 0; num <= 20; num++){    
+//     if(num % 2 === 0){
+//         console.log(num);
+//     }      
 // }
 
 // for(let num = 1; num < 7; num++){
@@ -46,11 +44,25 @@
 //     isShopOpen = false;
 // }
 
+// let count = 1;
+
+// while(count <= 10){
+//     console.log(count * 5);
+//     count++;
+// }
+
+// let count = 0;
+
+// while (count <= 45){
+//     console.log(count+=5);    
+// }
+
 // let count = 5;
 
-// while(count >= 0){
-//     console.log(count);
-//     count--;
+// while(count <= 50){
+//     if(count % 5 == 0){
+//         console.log(count);
+//     }
 // }
 
 
@@ -60,11 +72,11 @@
     // code to be executed
 //   } while (condition);
   
-// let i = 10;
-// do {
-//   console.log(i);
-//   i--;
-// } while (i >= 0);
+let i = 10;
+do {
+  console.log(i);
+  i--;
+} while (i >= 0);
 
 
 // for...in Loop: Used to iterate over the properties of an object.
@@ -118,11 +130,11 @@ let numbers = [1, 2, 3, 4, 5];
 // }
 
 let nums = [];
-console.log(nums);
+// console.log(nums);
 nums.push(1);
-console.log(nums);
+// console.log(nums);
 nums.push(10);
-console.log(nums);
+// console.log(nums);
 
 let dogs = ['german shepard', 'Terrier', 'ekuke']
 

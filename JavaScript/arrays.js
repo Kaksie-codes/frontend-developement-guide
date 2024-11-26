@@ -1,0 +1,12 @@
+let myArray = ['cow Leg'];
+console.log(myArray);
+myArray.push('Spaghetti');
+console.log(myArray);
+myArray.push('Indomie');
+console.log(myArray);
+myArray.unshift('Milo');
+console.log(myArray);
+myArray.shift();
+console.log(myArray);
+myArray.pop();
+console.log(myArray);

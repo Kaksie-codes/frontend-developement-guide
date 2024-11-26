@@ -9,7 +9,6 @@ function greetings(){
 // greetings();
 // greetings();
 // greetings();
-
 const displayCarNames = () => {
     console.log("Benz")
     console.log("Toyota")
