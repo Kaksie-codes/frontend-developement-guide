@@ -37,11 +37,11 @@
 // console.log({randomNumber})
 
 
-// let myAnimals = ["monkey", "Zebra", ["Lion", "ox", ["horse", ['rat', ['chicken']]],], "mouse", "tiger", "cat", "pig", "dog"]
+let myAnimals = ["monkey", "Zebra", ["Lion", "ox", ["horse", ['rat', ['chicken']]],], "mouse", "tiger", "cat", "pig", "dog"]
 
 // console.log(myAnimals)
 // console.log(myAnimals.length)
-// console.log(myAnimals[2])
+// console.log(myAnimals[1])
 // console.log(myAnimals[myAnimals.length - 1])
 // console.log(myAnimals[2][2][1][1][0])
 
@@ -57,14 +57,39 @@
 
 // animals.forEach((animal) => console.log(animal))
 
-const nums = [24, 23, 32, 45, 60];
+// const nums = [24, 23, 32, 45, 60];
 
-let randomIndex = Math.random();
-console.log({randomIndex})
-randomIndex = randomIndex * nums.length;
-console.log({randomIndex});
-randomIndex = Math.floor(randomIndex);
-console.log({randomIndex});
+// let randomIndex = Math.random();
+// console.log({randomIndex})
+// randomIndex = randomIndex * nums.length;
+// console.log({randomIndex});
+// randomIndex = Math.floor(randomIndex);
+// console.log({randomIndex});
 
-console.log(nums);
-console.log(nums[randomIndex]);
+// console.log(nums);
+// console.log(nums[randomIndex]);
+
+
+let randomNumbers = [];
+let evenNumbers = [];
+let oddNumbers = [];
+
+for(let i = 0; i < 20; i++){
+    let randomNumber = Math.random();
+    randomNumber = randomNumber * 30;
+    randomNumber = Math.floor(randomNumber);
+    randomNumbers.push(randomNumber);
+}
+
+
+for(let i = 0; i < randomNumbers.length; i++){
+    if(randomNumbers[i] % 2 === 0){
+        evenNumbers.push(randomNumbers[i]);
+    }else{
+        oddNumbers.push(randomNumbers[i]);
+    }
+}
+
+console.log(randomNumbers);
+console.log(evenNumbers);
+console.log(oddNumbers);
