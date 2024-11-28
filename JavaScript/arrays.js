@@ -1,17 +1,17 @@
-let myArray = ['cow Leg'];
-console.log(myArray);
-myArray.push('Spaghetti');
-console.log(myArray);
-myArray.push('Indomie');
-console.log(myArray);
-myArray.unshift('Milo');
-console.log(myArray);
-myArray.shift();
-console.log(myArray);
-myArray.pop();
-console.log(myArray);
-myArray.unshift(10);
-console.log(myArray);
+// let myArray = ['cow Leg'];
+// console.log(myArray);
+// myArray.push('Spaghetti');
+// console.log(myArray);
+// myArray.push('Indomie');
+// console.log(myArray);
+// myArray.unshift('Milo');
+// console.log(myArray);
+// myArray.shift();
+// console.log(myArray);
+// myArray.pop();
+// console.log(myArray);
+// myArray.unshift(10);
+// console.log(myArray);
 
 // let myNumbers = [];
 // console.log(myNumbers);
@@ -56,3 +56,15 @@ console.log(myArray);
 // }
 
 // animals.forEach((animal) => console.log(animal))
+
+const nums = [24, 23, 32, 45, 60];
+
+let randomIndex = Math.random();
+console.log({randomIndex})
+randomIndex = randomIndex * nums.length;
+console.log({randomIndex});
+randomIndex = Math.floor(randomIndex);
+console.log({randomIndex});
+
+console.log(nums);
+console.log(nums[randomIndex]);
