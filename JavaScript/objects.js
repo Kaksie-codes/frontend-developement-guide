@@ -5,12 +5,22 @@
 // There are two main ways to create an object:
 
 // 1.) Object Literal Notation:
-let vehicle = {};
-vehicle.brand = "Toyota";
-vehicle["model"] = "Camry";
+let vehicle = {
+  mileage: 1000,
+  isConvertible: false,
+  "African Made": true
+};
 // console.log(vehicle);
-// console.log(vehicle.model);
-// console.log(vehicle["model"]);
+// console.log(vehicle["isConvertible"]);
+// console.log(vehicle.mileage);
+// console.log(vehicle.brand);
+// vehicle.brand = "Toyota";
+// vehicle["car model"] = "Camry";
+// // console.log(vehicle);
+// // console.log(vehicle.model);
+// // console.log(vehicle["model"]);
+// console.log(vehicle);
+
 
 const person = {
   name: "John",
@@ -25,18 +35,28 @@ const person = {
   },
 };
 
+const sayHello = (name) => {
+  console.log('hi ' + name);
+}
+// sayHello("Bob")
 // console.log(person);
 
 // person.drive('Tesla');
+// person.drive('Mercedes');
+// person["drive"]("Keke");
+
+// console.log(console)
 
 // 2.)  Using new Object() Syntax:
 
 const car = new Object();
+// console.log(car);
 car.brand = "Toyota";
 car.model = "Corolla";
 car.year = 2020;
+car[Math.random() * 100] = 'correct'
 
-//   console.log(car);
+  // console.log(car);
 
 //   Accessing Object Properties
 //   You can access object properties in two ways:
@@ -52,16 +72,26 @@ car.year = 2020;
 //   In the above example, greet is a method of the person object.
 // person.drive('Toyota');
 
+const food = {
+  isSoup: true,
+  food_name: "Pepper Soup",
+  ingredients: ["onions", "bell peppers", "mayo", "garlic"],
+  cook: function () {
+    console.log("Cooking " + this.name);
+    this.isSoup = false;
+    console.log("Done cooking");
+  }
+}
+
+// const food_name = food.food_name;
+// console.log("food_name: " + food_name);
+
 // Destructuring Objects
 // Destructuring allows you to unpack values from objects into distinct variables.
 
-// const { age : my_Age, name, drive } = person;
-// const age = person.age;
-// console.log(my_Age);
-// console.log(age);
-// const name = person.name;
-// console.log(name);
-// console.log(age);   // Output: 30
+const { food_name:dish_name  } = food;
+console.log("food_name: " + dish_name );
+
 
 // Nested Object Destructuring
 // You can destructure nested objects too:
@@ -78,12 +108,11 @@ const student = {
 // const english = student["scores"]["english"];
 // console.log(english);
 
-//   const { scores } = student;
-//   const { math, english } = scores;
-const {
-  scores: { english, math },
-} = student;
-// console.log(english);
+  // const { scores } = student;
+  // console.log(scores)
+  // const { math, english } = scores;
+const {scores: { english, math }} = student;
+console.log(english);
 
 //   console.log(math);    // Outputs: 90
 //   console.log(english); // Outputs: 85
@@ -104,16 +133,7 @@ const myVehicle = {
   },
 };
 
-const { colors,
-  engineStats: {
-    props: {
-      electric: { batterySize, chargers },
-    },
-  },
-} = myVehicle;
-// console.log(colors[4][1], batterySize, chargers[2]);
-// console.log({ batterySize });
-// console.log(chargers[2]);
+
 
 //  Spread Operator (...)
 // The spread operator (...) allows you to copy or merge objects and arrays, as well as to unpack elements.
@@ -151,9 +171,9 @@ const updatedPerson = { ...person3, city: "lagos", age: 35 };
 const person4 = { name: "John", age: 30, city: "New York" };
 // const deletedPerson = { ...person4 };
 // delete deletedPerson.city;
-for(let [key, value] of Object.entries(person4)){
-  console.log(key, value);
-}
+// for(let [key, value] of Object.entries(person4)){
+//   console.log(key, value);
+// }
 // console.log(deletedPerson);
 
 // Object Methods
@@ -162,15 +182,15 @@ for(let [key, value] of Object.entries(person4)){
 // Object.keys()
 // Returns an array of the object’s keys.
 const citizen = { name: "John", age: 30 };
-console.log(Object.keys(citizen));
+// console.log(Object.keys(citizen));
 
 // Object.values()
 // Returns an array of the object’s values.
-console.log(Object.values(citizen));
+// console.log(Object.values(citizen));
 
 // Object.entries()
 // Returns an array of key-value pairs.
-console.log(Object.entries(citizen));
+// console.log(Object.entries(citizen));
 
 // this Keyword
 // In JavaScript, this refers to the current object the code is being written in.
@@ -243,7 +263,7 @@ const myCar = {
 Object.seal(myCar);
 myCar.mileage = 10;
 myCar.brand = "Tesla"
-console.log(myCar);
+// console.log(myCar);
 
 // Object freeze() and seal()
 
