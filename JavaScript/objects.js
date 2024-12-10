@@ -90,7 +90,7 @@ const food = {
 // Destructuring allows you to unpack values from objects into distinct variables.
 
 const { food_name:dish_name  } = food;
-console.log("food_name: " + dish_name );
+// console.log("food_name: " + dish_name );
 
 
 // Nested Object Destructuring
@@ -112,7 +112,7 @@ const student = {
   // console.log(scores)
   // const { math, english } = scores;
 const {scores: { english, math }} = student;
-console.log(english);
+// console.log(english);
 
 //   console.log(math);    // Outputs: 90
 //   console.log(english); // Outputs: 85
@@ -133,6 +133,12 @@ const myVehicle = {
   },
 };
 
+// console.log(myVehicle.colors[4][1])
+// console.log(myVehicle.engineStats.props.electric.batterySize)
+// console.log(myVehicle.engineStats.props.electric.chargers[2])
+
+const { engineStats:{props:{electric:{batterySize}}}} = myVehicle;
+// console.log(batterySize)
 
 
 //  Spread Operator (...)
@@ -141,7 +147,8 @@ const myVehicle = {
 // Copying an Object
 const person1 = { _name: 'John', age: 34 };
 const person2 = { ...person1, city: "New York" };
-const person5 = {...person2}
+// const person5 = {...person2}
+const person5 = person2;
 // console.log(person2);
 // console.log(person5);
 
@@ -169,12 +176,11 @@ const updatedPerson = { ...person3, city: "lagos", age: 35 };
 
 // Deleting Properties in an Object
 const person4 = { name: "John", age: 30, city: "New York" };
-// const deletedPerson = { ...person4 };
-// delete deletedPerson.city;
-// for(let [key, value] of Object.entries(person4)){
-//   console.log(key, value);
-// }
+const deletedPerson = { ...person4 };
+delete deletedPerson.city;
 // console.log(deletedPerson);
+
+
 
 // Object Methods
 // There are built-in methods to manipulate objects.
@@ -192,17 +198,18 @@ const citizen = { name: "John", age: 30 };
 // Returns an array of key-value pairs.
 // console.log(Object.entries(citizen));
 
+
 // this Keyword
 // In JavaScript, this refers to the current object the code is being written in.
 // Inside an object method, this refers to the object.
 const user = {
   name: "Emma",
-  greet: function () {
-    console.log("Hello, " + this.name);
+  greet: () => {
+    console.log("Hello, " + user.name);
   },
 };
 
-// user.greet();
+user.greet();
 
 const myStudent = {
   name: "Peter",
@@ -251,19 +258,29 @@ const myDetails = { myName, myAge };
 // You can dynamically define property keys using square brackets.
 let keyName = "color";
 const radomNumber = Math.floor(Math.random() * 20);
-keyName+=radomNumber;
+console.log({
+  radomNumber:radomNumber
+});
+keyName = keyName + radomNumber;
+console.log({keyName});
 const fruit = 'Cashew';
+
+
 
 const myCar = {
   brand: "BMW",
+  keyName: "red",
   [keyName]: "red",
-  [fruit]: 'tart'
+  // [fruit]: 'tart'
 };
 
-Object.seal(myCar);
-myCar.mileage = 10;
-myCar.brand = "Tesla"
-// console.log(myCar);
+myCar['isForeign'] = true;
+myCar['num-' + Math.random() * 10] = 'Orange juice';
+
+// Object.seal(myCar);
+// myCar.mileage = 10;
+// myCar.brand = "Tesla"
+console.log(myCar);
 
 // Object freeze() and seal()
 
@@ -284,3 +301,19 @@ myObj.b = 3; // Not allowed
 // 1.) create an Object called student
 // 2.) give it a name property and assign a string value to it
 // 3.) give it a grades property and assign an array of 7 numbers to it
+
+
+const myObject = {
+  stats: [2, 5, 7, 8, 0, 4, 3, 4, 5, 2, 7, 9, 4, 6],
+  getEvenNumbers: function(){
+    let evenNumbers = [];
+    for(let i = 0; i < this.stats.length; i++) {
+      if(this.stats[i] % 2 === 0) {
+        evenNumbers.push(this.stats[i]);
+      }
+    }
+    console.log(evenNumbers)
+  }
+}
+
+myObject.getEvenNumbers();
