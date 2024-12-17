@@ -15,6 +15,8 @@
 // 3.) Change the styles of a webpage (like changing colors or fonts).
 // 4.) Respond to user interactions (like clicking a button).
 
+// console.log(document)
+// console.log(window)
 
 // To work with the DOM in JavaScript, 
 // you need to know how to select elements, 
@@ -36,25 +38,25 @@ console.log(selectedH1);
 // 2.) document.getElementsByClassName()
 // Usage: Retrieves a collection of elements with the specified class name..
 const headers = document.getElementsByClassName('nice');
-// console.log(headers);
+console.log(headers);
 
 // 3.) document.getElementsByTagName()
 // Usage: Retrieves a collection of elements with the specified tag name..
 
-const myParagraph = document.getElementsByTagName('p');
-// console.log(myParagraph);
+const myParagraphs = document.getElementsByTagName('p');
+console.log(myParagraphs);
 
 // 4.) document.querySelector()
 // Usage: Retrieves the first element that matches a specified CSS selector.
-const mainheaderElement = document.querySelector('h3.main-header');
-// console.log(mainheaderElement);
-mainheaderElement.innerText += ' Happy Hour';
-mainheaderElement.style.color = 'Red'
+const mainheaderElement = document.querySelector('h1.nice');
+console.log(mainheaderElement);
+// mainheaderElement.innerText += ' Happy Hour';
+// mainheaderElement.style.color = 'Red'
 
 // 5.) document..querySelectorAll()
 // Usage: Retrieves all elements that match a specified CSS selector
-const allSpecialHeadings = document.querySelectorAll('h3.main-header');
-// console.log(allSpecialHeadings);
+const allSpecialHeadings = document.querySelectorAll('h1');
+console.log(allSpecialHeadings);
 
 // // const AfricanTExt = document.querySelector('span h3');
 // const AfricanTExt = document.querySelector('section.box h3');
@@ -69,7 +71,7 @@ targetDiv.style.backgroundColor = 'green';
 targetDiv.style.height = '300px';
 targetDiv.style.width = '300px';
 targetDiv.style.color = '#fff';
-targetDiv.innerText = count;
+// targetDiv.innerText = count;
 
 // const whorepresentswho = 'Jason'
 
