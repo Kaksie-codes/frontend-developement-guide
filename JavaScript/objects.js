@@ -209,7 +209,7 @@ const user = {
   },
 };
 
-user.greet();
+// user.greet();
 
 const myStudent = {
   name: "Peter",
@@ -258,11 +258,11 @@ const myDetails = { myName, myAge };
 // You can dynamically define property keys using square brackets.
 let keyName = "color";
 const radomNumber = Math.floor(Math.random() * 20);
-console.log({
-  radomNumber:radomNumber
-});
+// console.log({
+//   radomNumber:radomNumber
+// });
 keyName = keyName + radomNumber;
-console.log({keyName});
+// console.log({keyName});
 const fruit = 'Cashew';
 
 
@@ -280,7 +280,7 @@ myCar['num-' + Math.random() * 10] = 'Orange juice';
 // Object.seal(myCar);
 // myCar.mileage = 10;
 // myCar.brand = "Tesla"
-console.log(myCar);
+// console.log(myCar);
 
 // Object freeze() and seal()
 
@@ -306,13 +306,17 @@ myObj.b = 3; // Not allowed
 const myObject = {
   stats: [2, 5, 7, 8, 0, 4, 3, 4, 5, 2, 7, 9, 4, 6],
   getEvenNumbers: function(){
-    let evenNumbers = [];
+    let evenNumbers = []; 
+    let oddNumbers = [];
     for(let i = 0; i < this.stats.length; i++) {
       if(this.stats[i] % 2 === 0) {
-        evenNumbers.push(this.stats[i]);
+        evenNumbers.push(this.stats[i]);        
+      }else{
+        oddNumbers.push(this.stats[i]);        
       }
     }
     console.log(evenNumbers)
+    console.log(oddNumbers)
   }
 }
 
