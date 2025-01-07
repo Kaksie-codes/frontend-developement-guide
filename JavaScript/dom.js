@@ -34,29 +34,32 @@
 // document.getElementById()
 const selectedH1 = document.getElementById('title');
 console.log(selectedH1);
+selectedH1.innerText = 'CHAINDUSTRY ACADEMY';
+selectedH1.style.color = 'red'
+selectedH1.style.fontSize = '100px'
 
 // 2.) document.getElementsByClassName()
 // Usage: Retrieves a collection of elements with the specified class name..
 const headers = document.getElementsByClassName('nice');
-console.log(headers);
+// console.log(headers);
 
 // 3.) document.getElementsByTagName()
 // Usage: Retrieves a collection of elements with the specified tag name..
 
 const myParagraphs = document.getElementsByTagName('p');
-console.log(myParagraphs);
+// console.log(myParagraphs);
 
 // 4.) document.querySelector()
 // Usage: Retrieves the first element that matches a specified CSS selector.
 const mainheaderElement = document.querySelector('h1.nice');
-console.log(mainheaderElement);
+// console.log(mainheaderElement);
 // mainheaderElement.innerText += ' Happy Hour';
 // mainheaderElement.style.color = 'Red'
 
 // 5.) document..querySelectorAll()
 // Usage: Retrieves all elements that match a specified CSS selector
 const allSpecialHeadings = document.querySelectorAll('h1');
-console.log(allSpecialHeadings);
+// console.log(allSpecialHeadings);
 
 // // const AfricanTExt = document.querySelector('span h3');
 // const AfricanTExt = document.querySelector('section.box h3');
@@ -71,6 +74,9 @@ targetDiv.style.backgroundColor = 'green';
 targetDiv.style.height = '300px';
 targetDiv.style.width = '300px';
 targetDiv.style.color = '#fff';
+targetDiv.style.display = 'grid';
+targetDiv.style.placeContent = "center";
+targetDiv.style.fontSize = "60px"
 // targetDiv.innerText = count;
 
 // const whorepresentswho = 'Jason'
@@ -112,11 +118,11 @@ targetDiv.style.color = '#fff';
 
     //Example
     const element = document.getElementById('example');
-    console.log(element.innerText);
+    // console.log(element.innerText);
 
    
-    element.innerText = `<p>Hidden text</p>
-            <p>Visible text</p>`
+    // element.innerText = `<p>Hidden text</p>
+    //         <p>Visible text</p>`
 
 
 
