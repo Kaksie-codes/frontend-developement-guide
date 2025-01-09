@@ -33,16 +33,16 @@
 
 // document.getElementById()
 const selectedH1 = document.getElementById('title');
-console.log(selectedH1);
+// console.log(selectedH1);
 selectedH1.innerText = 'CHAINDUSTRY ACADEMY';
 selectedH1.style.color = 'red'
 selectedH1.style.fontSize = '100px'
-selectedH1.style.textDecoration = 'underline'
+// selectedH1.style.textDecoration = 'underline'
 
 // 2.) document.getElementsByClassName()
 // Usage: Retrieves a collection of elements with the specified class name..
 const headers = document.getElementsByClassName('nice');
-console.log(headers);
+// console.log(headers);
 
 headers[1].style.color = 'green'
 
@@ -54,7 +54,7 @@ const myParagraphs = document.getElementsByTagName('p');
 
 // 4.) document.querySelector()
 // Usage: Retrieves the first element that matches a specified CSS selector.
-const mainheaderElement = document.querySelector('h1.nice');
+const mainheaderElement = document.querySelector('p.nice');
 // console.log(mainheaderElement);
 // mainheaderElement.innerText += ' Happy Hour';
 // mainheaderElement.style.color = 'Red'
@@ -64,6 +64,14 @@ const mainheaderElement = document.querySelector('h1.nice');
 const allSpecialHeadings = document.querySelectorAll('h1');
 // console.log(allSpecialHeadings);
 
+
+const redTexts = document.querySelectorAll('.red');
+console.log(redTexts);
+
+for(let i = 0; i <redTexts.length; i++){
+    redTexts[i].style.color ='red';
+}
+
 // // const AfricanTExt = document.querySelector('span h3');
 // const AfricanTExt = document.querySelector('section.box h3');
 // AfricanTExt.style.color = 'green';
@@ -71,6 +79,8 @@ const button = document.querySelector('button');
 
 const targetDiv = document.getElementById('box');
 
+const innerWriteup = document.querySelector('section .outer-box .inner-box p')
+innerWriteup.textContent = 'Lagos'
 // console.log(targetDiv);
 
 targetDiv.style.backgroundColor = 'green';
