@@ -37,11 +37,14 @@ console.log(selectedH1);
 selectedH1.innerText = 'CHAINDUSTRY ACADEMY';
 selectedH1.style.color = 'red'
 selectedH1.style.fontSize = '100px'
+selectedH1.style.textDecoration = 'underline'
 
 // 2.) document.getElementsByClassName()
 // Usage: Retrieves a collection of elements with the specified class name..
 const headers = document.getElementsByClassName('nice');
-// console.log(headers);
+console.log(headers);
+
+headers[1].style.color = 'green'
 
 // 3.) document.getElementsByTagName()
 // Usage: Retrieves a collection of elements with the specified tag name..
