@@ -110,7 +110,12 @@ targetDiv.style.fontSize = "60px"
     // console.log(example.innerHTML);
 
     // example.innerHTML = `<img src="https://images.pexels.com/photos/5592604/pexels-photo-5592604.jpeg?auto=compress&cs=tinysrgb&w=600" alt="example image" height="50" width="50" />`;
-    
+    // example.innerHTML += `<ul>
+    // <li>Kanda</li>
+    // <li>Weather</li>
+    // </ul>
+    // `
+    //  example.innerHTML = `<p>Hidden text</p><p>Visible text</p>`
 
 // 2. textContent
 // Purpose: Gets or sets the text content of an element and all its descendants.
@@ -118,10 +123,11 @@ targetDiv.style.fontSize = "60px"
 // Considerations: More secure for user input as it does not interpret HTML tags.
 
     //Example
-    // const element = document.getElementById('example');
-    // console.log(element.textContent);
-    // element,textContent = `<img src="https://images.pexels.com/photos/5592604/pexels-photo-5592604.jpeg?auto=compress&cs=tinysrgb&w=600" alt="example image" height="50" width="50" />`
-    // element.textContent = `<p>Hidden text</p><p>Visible text</p>`
+    // const example = document.getElementById('example');
+    // console.log(example);
+    // console.log(example.textContent);
+    // example.textContent = `<img src="https://images.pexels.com/photos/5592604/pexels-photo-5592604.jpeg?auto=compress&cs=tinysrgb&w=600" alt="example image" height="50" width="50" />`
+    // example.textContent = `<p>Hidden text</p><p>Visible text</p>`
 
 // 3. innerText
 // Purpose: Gets or sets the visible text content of an element and its descendants.
@@ -130,12 +136,13 @@ targetDiv.style.fontSize = "60px"
 
 
     //Example
-    const element = document.getElementById('example');
-    // console.log(element.innerText);
+    const example = document.getElementById('example');
+    console.log(example);
+    console.log(example.innerText);
 
    
-    // element.innerText = `<p>Hidden text</p>
-    //         <p>Visible text</p>`
+    element.innerText = `<p>Hidden text</p>
+            <p>Visible text</p>`
 
 
 

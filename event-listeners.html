@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: grid;
+            place-content: center;
+            height: 100vh;
+        }
+        form{
+            width: min(500px, 90vw);
+            background-color: brown;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        form button{
+            padding: 10px;
+            background: green;
+        }
+        button{
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="myForm">
+        <label for="name">First Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <!-- <br> -->
+        <label for="occupation">Occupation</label>
+        <input type="text" id="occupation" placeholder="Enter your occupation" onchange="alert('input 2 changed')">
+        <button>Submit Application</button>
+    </form>
+    <button id="myButton">Click me</button>
+    <p>lorem5000</p>
+    <script src="event-listeners.js"></script>
+</body>
+</html>
