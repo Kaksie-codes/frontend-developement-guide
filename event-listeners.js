@@ -22,14 +22,14 @@
 const button = document.getElementById("myButton");
 
 console.log(button);
-
 // A.) Mouse Events
 
 // 1.) Click: Triggered when an element is clicked.
 
-// const handleClick = () => {
-//     alert("Button was clicked!");
-// }
+const handleClick = () => {
+  document.body.style.backgroundColor = "yellow";
+  alert("Button was clicked!");    
+}
 
 // button.addEventListener("click", handleClick);
 
@@ -46,15 +46,15 @@ console.log(button);
 
 // 3.) mouseover: Triggered when the mouse pointer is moved over an element.
 
-// button.addEventListener("mouseover", function() {
-//   button.style.backgroundColor = "red";
-// });
+button.addEventListener("mouseover", function() {
+  button.style.backgroundColor = "red";
+});
 
 // 4.) mouseout: Triggered when the mouse pointer is moved out of an element.
 
-// button.addEventListener("mouseout", function() {
-//   button.style.backgroundColor = "green";
-// });
+button.addEventListener("mouseout", function() {
+  button.style.backgroundColor = "green";
+});
 
 // B.) Keyboard Events
 // 1.) keydown: Triggered when a key is pressed down.
@@ -132,23 +132,48 @@ const form = document.getElementById("myForm");
 
 
 // Removing Event Listeners
-function handleClick() {
-    alert("Button clicked!");
-  }
+// function handleClick() {
+//     alert("Button clicked!");
+//   }
   
   
-  button.addEventListener("click", handleClick);
+  // button.addEventListener("click", handleClick);
   
   // Later, remove the event listener
-  button.removeEventListener("click", handleClick);
+  // button.removeEventListener("click", handleClick);
   
   
 
   
 
+const box = document.getElementById('box');
+const incrementBtn = document.getElementById('icr');
+const decrementBtn = document.getElementById('dcr');
+const resetBtn = document.getElementById('reset');
+let count = 0;
+box.textContent = count;
 
-
+incrementBtn.addEventListener('click', () => {
+  if(count >= 15){
+    alert('Count cannot be more than 15')
+  }else{
+    count = count + 1;
+    box.textContent = count;
+  }  
+})
+decrementBtn.addEventListener('click', () => {
+  if(count <= 0){
+    alert('Count cannot be less than 0')
+  }else{
+    count = count - 1;
+    box.textContent = count;
+  }
   
+})
+resetBtn.addEventListener('click', () => {
+  count = 0;
+  box.textContent = count;
+})
   
 
 

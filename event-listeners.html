@@ -28,17 +28,41 @@
             padding: 10px;
             background: green;
         }
-        button{
+        button#myButton{
             background-color: blue;
             color: white;
             font-size: 20px;
             padding: 20px;
             border-radius: 20px;
             margin-top: 30px;
+            cursor: pointer;
+            z-index: 100;
+        }
+        .box{
+            background-color: blue;
+            color: white;
+            font-size: 30px;
+            width: 250px;
+            height: 250px;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+        }
+        .btn-group{
+            display: flex;
+            gap: 20px;
         }
     </style>
 </head>
 <body>
+    <div class="box" id="box">
+        0
+    </div>
+    <div class="btn-group">
+        <button id="icr">Increment</button>
+        <button id="reset">Reset</button>
+        <button id="dcr">Decrement</button>
+    </div>
     <form action="" id="myForm">
         <label for="name">First Name</label>
         <input type="text" id="name" placeholder="Enter your name">
