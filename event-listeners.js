@@ -21,7 +21,7 @@
 // Common Types of Event Listeners
 const button = document.getElementById("myButton");
 
-console.log(button);
+// console.log(button);
 // A.) Mouse Events
 
 // 1.) Click: Triggered when an element is clicked.
@@ -31,7 +31,7 @@ const handleClick = () => {
   alert("Button was clicked!");    
 }
 
-// button.addEventListener("click", handleClick);
+button.addEventListener("click", handleClick);
 
 
 // button.addEventListener("click", function(){
@@ -58,14 +58,16 @@ button.addEventListener("mouseout", function() {
 
 // B.) Keyboard Events
 // 1.) keydown: Triggered when a key is pressed down.
-// document.addEventListener("keydown", function(event) {
-//     console.log(event);
-//     console.log("Key pressed: " + event.key);
-//     if(event.keyCode === 13){
-//         alert('You clicked on Enter')
-//     }
-//     button.style.backgroundColor = "yellow";
-// });
+document.addEventListener("keydown", function(event) {
+  // const myBox = document.getElementById('mybox');
+    console.log(event);
+    console.log("Key pressed: " + event.key);
+    // myBox.innerText += event.key;
+    if(event.keyCode === 13){
+        alert('You clicked on Enter')
+    }
+    button.style.backgroundColor = "yellow";
+});
 
 // 2.) keyup: Triggered when a key is released.
 // document.addEventListener("keyup", function(event) {
@@ -85,32 +87,33 @@ button.addEventListener("mouseout", function() {
 // C.) Form Events
 // 1.) submit: Triggered when a form is submitted.
 const form = document.getElementById("myForm");
-// form.addEventListener("submit", function(event) {
-//   event.preventDefault(); // Prevents the form from being submitted
-//   alert("Form submitted!");
-// });
+form.addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevents the form from being submitted
+  alert("Form submitted!");
+});
 
 // 2.) change: Triggered when the value of an input element changes.
 // const input = document.getElementById("name");
-// console.log(input);
+// console.log('input >>>>', input);
 // // console.log("Value: " + input.value);
 
 // input.addEventListener("input", function(e) {
 //   console.log(e.target);  
-//   console.log("Input value changed: " + e.target.value);  
+//   let input = e.target
+//   console.log("Input value changed: " + input.value);  
 // });
 
 // 3.) focus: Triggered when an element (like an input) gains focus.
-// const input = document.getElementById("myInput");
-// input.addEventListener("focus", function() {
-//   input.style.backgroundColor = "yellow";
-// });
+const input = document.getElementById("name");
+input.addEventListener("focus", function() {
+  input.style.backgroundColor = "yellow";
+});
 
 // 4.) blur: Triggered when an element loses focus.
 // const input = document.getElementById("myInput");
-// input.addEventListener("blur", function() {
-//   input.style.backgroundColor = "";
-// });
+input.addEventListener("blur", function() {
+  input.style.backgroundColor = "blue";
+});
 
 
 // D.) Window Events
@@ -125,9 +128,9 @@ const form = document.getElementById("myForm");
 //   });
 
 // 3.) scroll: Triggered when the user scrolls the page.
-// window.addEventListener("scroll", function() {
-//     console.log("Page scrolled!");
-//   });
+window.addEventListener("scroll", function() {
+    console.log("Page scrolled!");
+  });
 
 
 
@@ -140,7 +143,7 @@ const form = document.getElementById("myForm");
   // button.addEventListener("click", handleClick);
   
   // Later, remove the event listener
-  // button.removeEventListener("click", handleClick);
+  button.removeEventListener("click", handleClick);
   
   
 
@@ -151,7 +154,13 @@ const incrementBtn = document.getElementById('icr');
 const decrementBtn = document.getElementById('dcr');
 const resetBtn = document.getElementById('reset');
 let count = 0;
+let bgColors = ["black", 'yellow', 'green', "orange", "gray", "pink", "red"]
 box.textContent = count;
+
+const generateBgColor = () => {
+  const randomIndex = Math.floor(Math.random() * bgColors.length);  
+  box.style.backgroundColor = bgColors[randomIndex];
+}
 
 incrementBtn.addEventListener('click', () => {
   if(count >= 15){
@@ -159,6 +168,7 @@ incrementBtn.addEventListener('click', () => {
   }else{
     count = count + 1;
     box.textContent = count;
+    generateBgColor();
   }  
 })
 decrementBtn.addEventListener('click', () => {
@@ -167,12 +177,14 @@ decrementBtn.addEventListener('click', () => {
   }else{
     count = count - 1;
     box.textContent = count;
+    generateBgColor();
   }
   
 })
 resetBtn.addEventListener('click', () => {
   count = 0;
   box.textContent = count;
+  generateBgColor();
 })
   
 

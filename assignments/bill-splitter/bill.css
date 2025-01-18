@@ -111,7 +111,7 @@ input:focus{
     border-radius: 10px;
 }
 .right button.disabled{
-    background-color: #0D686D;
+    background-color: #0D686D;    
     cursor: not-allowed;
 }
 .display{
