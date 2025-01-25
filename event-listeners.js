@@ -143,7 +143,7 @@ window.addEventListener("scroll", function() {
   // button.addEventListener("click", handleClick);
   
   // Later, remove the event listener
-  button.removeEventListener("click", handleClick);
+  // button.removeEventListener("click", handleClick);
   
   
 

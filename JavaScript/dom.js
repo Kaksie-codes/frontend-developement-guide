@@ -33,18 +33,18 @@
 
 // document.getElementById()
 const selectedH1 = document.getElementById('title');
-// console.log(selectedH1);
-selectedH1.innerText = 'CHAINDUSTRY ACADEMY';
+// console.log(selectedH1); 
+selectedH1.innerText = 'CHAINDUSTRY ACADEMY'; 
 selectedH1.style.color = 'red'
 selectedH1.style.fontSize = '100px'
-// selectedH1.style.textDecoration = 'underline'
+selectedH1.style.textDecoration = 'underline'
 
 // 2.) document.getElementsByClassName()
 // Usage: Retrieves a collection of elements with the specified class name..
 const headers = document.getElementsByClassName('nice');
 // console.log(headers);
 
-headers[1].style.color = 'green'
+
 
 // 3.) document.getElementsByTagName()
 // Usage: Retrieves a collection of elements with the specified tag name..
@@ -55,18 +55,21 @@ const myParagraphs = document.getElementsByTagName('p');
 // 4.) document.querySelector()
 // Usage: Retrieves the first element that matches a specified CSS selector.
 const mainheaderElement = document.querySelector('p.nice');
-// console.log(mainheaderElement);
+console.log(mainheaderElement);
 // mainheaderElement.innerText += ' Happy Hour';
 // mainheaderElement.style.color = 'Red'
 
+document.body.style.backgroundColor = 'orange'
+
+
 // 5.) document..querySelectorAll()
 // Usage: Retrieves all elements that match a specified CSS selector
-const allSpecialHeadings = document.querySelectorAll('h1');
-// console.log(allSpecialHeadings);
+const allSpecialHeadings = document.querySelectorAll('p.nice');
+console.log(allSpecialHeadings);
 
 
 const redTexts = document.querySelectorAll('.red');
-console.log(redTexts);
+// console.log(redTexts);
 
 for(let i = 0; i <redTexts.length; i++){
     redTexts[i].style.color ='red';
@@ -82,7 +85,7 @@ const targetDiv = document.getElementById('box');
 const innerWriteup = document.querySelector('section .outer-box .inner-box p')
 innerWriteup.textContent = 'Lagos'
 // console.log(targetDiv);
-
+let count = 0;
 targetDiv.style.backgroundColor = 'green';
 targetDiv.style.height = '300px';
 targetDiv.style.width = '300px';
@@ -90,7 +93,12 @@ targetDiv.style.color = '#fff';
 targetDiv.style.display = 'grid';
 targetDiv.style.placeContent = "center";
 targetDiv.style.fontSize = "60px"
-// targetDiv.innerText = count;
+targetDiv.innerText = count;
+
+targetDiv.addEventListener('click', () => {
+    count++;
+    targetDiv.innerText = count;
+})
 
 // const whorepresentswho = 'Jason'
 
@@ -137,12 +145,12 @@ targetDiv.style.fontSize = "60px"
 
     //Example
     const example = document.getElementById('example');
-    console.log(example);
-    console.log(example.innerText);
+    // console.log(example);
+    // console.log(example.innerText);
 
    
-    element.innerText = `<p>Hidden text</p>
-            <p>Visible text</p>`
+    // element.innerText = `<p>Hidden text</p>
+    //         <p>Visible text</p>`
 
 
 

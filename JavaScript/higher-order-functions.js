@@ -155,9 +155,9 @@ function repeatAction(n, action) {
     }
   }
   
-  repeatAction(3, (i) => {
-    console.log(`This is iteration ${i + 1}`);
-  });
+  // repeatAction(3, (i) => {
+  //   console.log(`This is iteration ${i + 1}`);
+  // });
 
 
 // console.log("Task 1: Start");
