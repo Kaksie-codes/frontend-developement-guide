@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #131218;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    width: min(90%, 400px);
+    margin-inline: auto;
+    /* background-color: aqua; */
+}
+.container h1 {
+    font-weight: 600;
+    font-size: 1.31rem;
+    padding: 1rem 1.75rem;
+    color: #6A6876;    
+    text-align: center;
+}
+.container .password-output {
+    position: relative;
+    background-color: #24232B;
+}
+
+.password-output input {
+    width: 100%;
+    height: 53px;
+    color: white;
+    background: none;
+    font-size: 1.06rem;
+    font-weight: 500;
+    border-radius: 4px;
+    letter-spacing: 1.4px;
+    /* border: 1px solid #aaa; */
+    padding: 0 2.85rem 0 1rem;
+    outline: none;
+    border: none;
+}
+
+.password-output span {
+    position: absolute;
+    right: 13px;
+    cursor: pointer;
+    line-height: 53px;
+    color: #707070;
+}
+
+.password-output span:hover {
+    color: #A2FFAF !important;
+}
+
+
+.lower-content{
+    padding: 20px;
+    background-color: #24232B;
+    margin-top: 10px;
+    color: white;
+}
+
+.pass-length .details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input[type="range"]{
+    width: 100%;
+    margin-block: 10px;
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.options .option{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.options .option:first-child {
+    pointer-events: none;
+    opacity: 0.5;
+}
+.options .option input {
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    border: white;
+    outline: white;
+}
+
+.options .option label {
+    cursor: pointer;
+}
+.generate-btn {
+    width: 100%;
+    color: #24232B;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #A2FFAF;
+    font-size: 1.06rem;
+    padding: 0.94rem 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin: 0.94rem 0 1.3rem;
+    font-weight: 900;
+}
+.strenght-section{
+    padding: 10px;
+    background-color: #131218;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#strenght-indicator{
+    display: flex;
+    gap: 10px;
+}
+
+#strenght-indicator span{
+    height: 20px;
+    width: 10px;
+    border: 1px solid white;
+}
+#strenght-indicator span.active{
+    background-color: #A2FFAF;
+}

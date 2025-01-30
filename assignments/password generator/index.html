@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />    
+</head>
+<body>    
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="password-output">
+            <input type="text" placeholder="P4$5W0rD!">
+            <span><i class="fa-regular fa-copy"></i></span>
+        </div>
+        <div class="lower-content">
+            <div class="pass-length">
+                <div class="details">
+                    <label class="title">Password Length</label>
+                    <span>-1</span>
+                </div>
+                <input type="range" min="5" max="20" value="12" step="1">
+            </div>
+            <ul class="options">
+                <li class="option">
+                    <input type="checkbox" id="lowercase" checked>
+                    <label for="lowercase">Include Lowercase letters</label>
+                </li>
+                <li class="option">
+                    <input type="checkbox" id="uppercase">
+                    <label for="uppercase">Include Uppercase letters</label>
+                </li>
+                <li class="option">
+                    <input type="checkbox" id="numbers">
+                    <label for="numbers">Include  Numbers</label>
+                </li>
+                <li class="option">
+                    <input type="checkbox" id="symbols">
+                    <label for="symbols">Include Symbols</label>
+                </li>                
+            </ul>
+            <div class="strenght-section">
+                <p>STRENGHT</p>
+                <div id="strenght-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <button class="generate-btn">Generate </button>
+        </div> 
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
