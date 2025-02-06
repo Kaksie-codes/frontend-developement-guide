@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Todo App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- <button onclick="alert(`${Math.floor(Math.random() * 10)}`)">Click me</button> -->
+    <div class="wrapper">
+        <div class="inputs">
+            <div class="task-input">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <input type="text" id="input" autocomplete="off" placeholder="Add a new Task...">
+                <button class="add-btn">Add Task</button>  
+            </div>                      
+        </div>
+        <div class="controls">  
+            <button class="clear-btn">Clear All</button>            
+            <select id="filter-todos">
+                <option value="all" class="active">All</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+            </select>                    
+        </div>
+        <ul class="task-box">
+            <li class="task">
+                <div class="content">
+                    <input type="checkbox">
+                    <div class="spans">
+                        <span class="text">Make a Million Dollars</span>
+                        <span class="settings">
+                            <button><i class="fa fa-pencil" aria-hidden="true"></i>Edit</button>
+                            <button><i class="fa fa-trash"></i>Delete</button>
+                        </span>
+                    </div>
+                </div>                
+            </li>            
+        </ul>
+    </div>
+    <div class="author"><p>built by Coder1 (n_kay)</p></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
